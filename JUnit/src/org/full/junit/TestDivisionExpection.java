@@ -3,7 +3,7 @@ package org.full.junit;
 import org.junit.Before;
 import org.junit.Test;
 
-public class testDivisionExpection {
+public class TestDivisionExpection {
 	private DivisionOperation divisionOperation;
 
 	@Before
