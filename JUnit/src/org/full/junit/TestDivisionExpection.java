@@ -1,6 +1,7 @@
 package org.full.junit;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class TestDivisionExpection {
@@ -19,6 +20,12 @@ public class TestDivisionExpection {
 	@Test(expected = ArithmeticException.class)
 	public void testDivisionOperation1() {
 		divisionOperation.division(0, 0);
+	}
+	
+	//If reference object is Null it throws NPE
+	@Ignore
+	@Test(expected = NullPointerException.class)
+	public void testDivisionOperation2() {
 	}
 
 }

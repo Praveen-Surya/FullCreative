@@ -22,7 +22,7 @@ public class TestPrimeNumber {
 
 	@Test
 	public void notAPrimeNumberTest() {
-		assertTrue(primeNumber.PrimeNumberCheck(27));
+		assertTrue(true==primeNumber.PrimeNumberCheck(27));
 
 	}
 
