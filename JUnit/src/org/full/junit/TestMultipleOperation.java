@@ -34,7 +34,7 @@ public class TestMultipleOperation {
 	}
 
 	@Parameterized.Parameters
-	public static Collection input() {
+	public static Collection<Object[]> input() {
 		return Arrays.asList(new Object[][] { { 1, 1, 1 }, { 11, -1, -11 }, { -10, -22, +220 }, { 0, 1, 0 },
 				{ 0, -1, 0 }, { 0, 0, 0 } });
 	}

@@ -34,7 +34,7 @@ public class TestAdditionOperations {
 	}
 
 	@Parameterized.Parameters
-	public static Collection input() {
+	public static Collection<Object[]> input() {
 		return Arrays.asList(new Object[][] { { 1, 1, 2 }, { 11, -1, 10 }, { -10, -22, -32 }, { 0, 1, 1 },
 				{ 0, -1, -1 }, { 0, 0, 0 } });
 	}

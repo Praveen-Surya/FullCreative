@@ -34,7 +34,7 @@ public class TestDivisionOperation {
 	}
 
 	@Parameterized.Parameters
-	public static Collection input() {
+	public static Collection<Object[]> input() {
 		return Arrays.asList(new Object[][] { { 1, 1, 1 }, { 12, -6, -2 }, { -10, -5, 2 }, { 0, 1, 0 }, { 0, -1, 0 } });
 
 	}

@@ -15,14 +15,14 @@ public class TestPrimeNumber {
 	}
 
 	@Test
-	public void primeNumberTest() {
-		assertFalse(primeNumber.PrimeNumberCheck(29));
+	public void notAPrimeNumberTest() {
+		assertFalse(primeNumber.primeNumberCheck(20));
 
 	}
 
 	@Test
-	public void notAPrimeNumberTest() {
-		assertTrue(true==primeNumber.PrimeNumberCheck(27));
+	public void primeNumberTest() {
+		assertTrue(primeNumber.primeNumberCheck(17));
 
 	}
 
