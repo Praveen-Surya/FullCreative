@@ -7,7 +7,7 @@ public class BufferClass {
 		StringBuffer companyName = new StringBuffer("Apple");
 
 		// duplicate can be created with different memory address
-		StringBuilder companyName1 = new StringBuilder("Apple");
+		StringBuffer companyName1 = new StringBuffer("Apple");
 
 		System.out.println(companyName.hashCode());
 		System.out.println(companyName1.hashCode());
