@@ -28,10 +28,10 @@ public class StringHandler {
 						i++;
 					}
 
-					if (temp.equals(oldStr) && i < inputChar.length) {
+					if (temp == oldStr && i < inputChar.length) {
 						result = result + newStr + " ";
 
-					} else if (temp.equals(oldStr) && i == inputChar.length) {
+					} else if (temp == oldStr && i == inputChar.length) {
 						result = result + newStr;
 
 					} else if (temp != oldStr && i < inputChar.length) {
