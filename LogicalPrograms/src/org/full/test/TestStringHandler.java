@@ -12,12 +12,14 @@ import org.junit.runners.Parameterized;
 @RunWith(Parameterized.class)
 public class TestStringHandler {
 
+	private String inputStr;
 	private String oldString;
 	private String newString;
 	private String expectedResult;
 	private StringHandler stringHandler;
 
-	public TestStringHandler(String oldString, String newString, String expectedResult) {
+	public TestStringHandler(String inputStr, String oldString, String newString, String expectedResult) {
+		this.inputStr = inputStr;
 		this.oldString = oldString;
 		this.newString = newString;
 		this.expectedResult = expectedResult;
@@ -30,16 +32,20 @@ public class TestStringHandler {
 
 	@Test
 	public void testStringHandler() {
-		assertEquals(expectedResult, stringHandler.replaceString(oldString, newString));
+		assertEquals(expectedResult, stringHandler.replaceString(inputStr, oldString, newString));
 	}
 
 	@Parameterized.Parameters
 	public static Collection<Object[]> input() {
-		return Arrays.asList(new Object[][] { { "a", "b", "Jbvb is b Progrbmming Lbngubge" },
-				{ " ", "b", "JavabisbabProgrammingbLanguage" }, { "a", " ", "J v  is   Progr mming L ngu ge" },
-				{ "a", "1", "J1v1 is 1 Progr1mming L1ngu1ge" }, { "a", "*", "J*v* is * Progr*mming L*ngu*ge" },
-				{ "z", "a", "Java is a Programming Language" },
-				{ "Java", "Python", "Python is a Programming Language" } });
+		return Arrays.asList(
+				new Object[][] { { "Java is a Programming Language", "a", "b", "Jbvb is b Progrbmming Lbngubge" },
+						{ "Java is a Programming Language", " ", "b", "JavabisbabProgrammingbLanguage" },
+						{ "Java is a Programming Language", "a", " ", "J v  is   Progr mming L ngu ge" },
+						{ "Java is a Programming Language", "a", "1", "J1v1 is 1 Progr1mming L1ngu1ge" },
+						{ "Java is a Programming Language", "a", "**", "J*v* is * Progr*mming L*ngu*ge" },
+						{ "Java is a Programming Language", "z", "a", "Java is a Programming Language" },
+						{ "Java is a Programming Language", "Java", "Python", "Python is a Programming Language" },
+						{ "India is my country", "my", "our", "India is our country" } });
 	}
 
 }

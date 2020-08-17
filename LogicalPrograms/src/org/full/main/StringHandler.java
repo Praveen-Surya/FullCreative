@@ -2,9 +2,8 @@ package org.full.main;
 
 public class StringHandler {
 
-	public String replaceString(String oldStr, String newStr) {
+	public String replaceString(String inputStr, String oldStr, String newStr) {
 
-		String inputStr = "Java is a Programming Language";
 		String result = "";
 		char[] inputChar = inputStr.toCharArray();
 		if (inputStr.contains(oldStr)) {
@@ -28,10 +27,10 @@ public class StringHandler {
 						i++;
 					}
 
-					if (temp == oldStr && i < inputChar.length) {
+					if (temp.equals(oldStr) && i < inputChar.length) {
 						result = result + newStr + " ";
 
-					} else if (temp == oldStr && i == inputChar.length) {
+					} else if (temp.equals(oldStr) && i == inputChar.length) {
 						result = result + newStr;
 
 					} else if (temp != oldStr && i < inputChar.length) {
