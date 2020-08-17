@@ -6,13 +6,13 @@ public class Television {
 
 	public void decreaseVolume(int volume) {
 		if (volume > 0) {
-			this.volume = volume--;
+			this.volume = --volume;
 		}
 	}
 
 	public void increaseVolume(int volume) {
 		if (100 > volume) {
-			this.volume = volume++;
+			this.volume = ++volume;
 		}
 	}
 
