@@ -15,14 +15,14 @@ public class TestStringHandler {
 	private String inputStr;
 	private String oldString;
 	private String newString;
-	private String expectedResult;
+	private String expectedString;
 	private StringHandler stringHandler;
 
-	public TestStringHandler(String inputStr, String oldString, String newString, String expectedResult) {
+	public TestStringHandler(String inputStr, String oldString, String newString, String expectedString) {
 		this.inputStr = inputStr;
 		this.oldString = oldString;
 		this.newString = newString;
-		this.expectedResult = expectedResult;
+		this.expectedString = expectedString;
 	}
 
 	@Before
@@ -32,7 +32,7 @@ public class TestStringHandler {
 
 	@Test
 	public void testStringHandler() {
-		assertEquals(expectedResult, stringHandler.replaceString(inputStr, oldString, newString));
+		assertEquals(expectedString, stringHandler.replaceString(inputStr, oldString, newString));
 	}
 
 	@Parameterized.Parameters

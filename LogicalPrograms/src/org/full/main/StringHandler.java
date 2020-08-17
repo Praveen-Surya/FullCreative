@@ -4,7 +4,7 @@ public class StringHandler {
 
 	public String replaceString(String inputStr, String oldStr, String newStr) {
 
-		String result = "";
+		String resultStr = "";
 		char[] inputChar = inputStr.toCharArray();
 		if (inputStr.contains(oldStr)) {
 			if (oldStr.length() == 1) {
@@ -16,7 +16,7 @@ public class StringHandler {
 							inputChar[index] = newStr.charAt(index1);
 
 						}
-						result += inputChar[index];
+						resultStr += inputChar[index];
 					}
 				}
 			} else {
@@ -28,23 +28,23 @@ public class StringHandler {
 					}
 
 					if (temp.equals(oldStr) && i < inputChar.length) {
-						result = result + newStr + " ";
+						resultStr = resultStr + newStr + " ";
 
 					} else if (temp.equals(oldStr) && i == inputChar.length) {
-						result = result + newStr;
+						resultStr = resultStr + newStr;
 
 					} else if (temp != oldStr && i < inputChar.length) {
-						result = result + temp + " ";
+						resultStr = resultStr + temp + " ";
 
 					} else if (temp != oldStr && i == inputChar.length) {
-						result = result + temp;
+						resultStr = resultStr + temp;
 					}
 				}
 			}
 		} else {
-			result = inputStr;
+			resultStr = inputStr;
 		}
-		return result;
+		return resultStr;
 
 	}
 }
