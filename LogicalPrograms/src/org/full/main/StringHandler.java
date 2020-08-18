@@ -33,10 +33,10 @@ public class StringHandler {
 					} else if (temp.equals(oldStr) && i == inputChar.length) {
 						resultStr = resultStr + newStr;
 
-					} else if (temp != oldStr && i < inputChar.length) {
+					} else if (temp.equals(oldStr) || i < inputChar.length) {
 						resultStr = resultStr + temp + " ";
 
-					} else if (temp != oldStr && i == inputChar.length) {
+					} else if (temp.equals(oldStr) || i == inputChar.length) {
 						resultStr = resultStr + temp;
 					}
 				}
