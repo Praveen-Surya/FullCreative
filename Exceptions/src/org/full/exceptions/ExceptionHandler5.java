@@ -10,8 +10,7 @@ public class ExceptionHandler5 {
 
 	public static void main(String[] args) {
 		int unicode = 0;
-		try (FileReader file = new FileReader("C:/Users/user.FULL276-WIN.000.001/Desktop/Java.txt");
-				) {
+		try (FileReader file = new FileReader("C:/Users/user.FULL276-WIN.000.001/Desktop/Java.txt");) {
 
 			while ((unicode = file.read()) != -1) {
 				System.out.print((char) unicode);
