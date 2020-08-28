@@ -10,9 +10,9 @@ public class ExceptionHandler4 {
 
 	static FileReader file = null;
 
-	public static void read() throws NullPointerException, IOException {
+	public static void read() throws IOException {
 
-		int unicode = 0;
+		int unicode = 0;	
 		file = new FileReader("C:/Users/user.FULL276-WIN.000.001/Desktop/Java.txt");
 		while ((unicode = file.read()) != -1) {
 			System.out.print((char) unicode);

@@ -13,10 +13,10 @@ public class ExceptionHandler2 {
 	}
 
 	public static void main(String[] args) {
-
+		
 		try {
 			divide(null); // NullPointer Exception
-		} catch (ArithmeticException exception) {
+		} catch (NullPointerException exception) {
 			System.out.println("NullPointerException Handled");
 		} finally {
 			System.out.println("Finally Block");
