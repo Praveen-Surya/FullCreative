@@ -5,23 +5,21 @@ package org.full.polymorphism;
 public class Driver {
 
 	public static void callArea(Shape a) {
+
 		a.area();
 
 	}
 
 	public static void main(String[] args) {
 
-		Triangle triangle = new Triangle();
-		triangle.area();
-
-		Circle circle = new Circle();
+		Shape circle = new Circle();
 		circle.area();
 
-		Shape s = new Circle();
-		s.area();
+		Shape triangle = new Triangle();
+		triangle.area();
 
-		callArea(triangle);
 		callArea(circle);
+		callArea(triangle);
 
 	}
 

@@ -1,8 +1,7 @@
 package org.full.polymorphism;
 
-public class Shape {
+public interface Shape {
 
-	void area() {
-	}
+	void area();
 
 }
